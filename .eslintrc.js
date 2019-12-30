@@ -1,16 +1,33 @@
 module.exports = {
-  extends: ['eslint-config-ali', 'prettier', 'plugin:prettier/recommended'],
-  parser: 'babel-eslint',
-  rules: {
-    'prettier/prettier': 'error',
-    'strict': 'off',
-    'no-console': 'true',
-    'import/no-dynamic-require': 'off',
-    'global-require': 'off',
-    'require-yield': 'off',
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
   },
-  plugins: ['prettier'],
-  globals: {
-    React: 'readable'
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "react/sort-prop-types": [
+      "error",
+      {
+        "callbacksLast": true
+      }
+    ],
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": true
+      }
+    ],
+    "react/forbid-prop-types": "off",
+    "simple-import-sort/sort": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src"]
+      }
+    }
   }
 };
