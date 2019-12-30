@@ -4,14 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "eslint --fix --ext .js",
-      "prettier --write",
-      "git add"
-    ]
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -23,16 +17,26 @@
     "url": "https://github.com/Endiaoshuai/code_standards_test/issues"
   },
   "homepage": "https://github.com/Endiaoshuai/code_standards_test#readme",
-  "dependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-ali": "^2.0.1",
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix --ext .js",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^5.0.0",
+    "eslint-config-airbnb": "latest",
     "eslint-plugin-import": "^2.6.0",
-    "eslint-plugin-react": "^7.1.0",
     "husky": "^0.14.2",
     "babel-eslint": "^8.1.1",
     "lint-staged": "^4.0.0",
     "prettier": "^1.16.4",
+    "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-config-prettier": "^4.0.0"
+  },
+  "dependencies": {
+    "stylint": "^2.0.0"
   }
 }

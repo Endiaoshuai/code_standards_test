@@ -1,2 +1,2 @@
-let name = 'jack', age = 23;
+let name = 'jack'; let age   = 23
 let obj = { name, age }
