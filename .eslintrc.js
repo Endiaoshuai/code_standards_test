@@ -3,11 +3,11 @@ module.exports = {
   parser: 'babel-eslint',
   rules: {
     'prettier/prettier': 'error',
-    strict: 'off',
-    'no-console': 'off',
+    'strict': 'off',
+    'no-console': 'true',
     'import/no-dynamic-require': 'off',
     'global-require': 'off',
-    'require-yield': 'off'
+    'require-yield': 'off',
   },
   plugins: ['prettier'],
   globals: {
