@@ -28,7 +28,7 @@
     "eslint": "^5.0.0",
     "eslint-config-airbnb": "latest",
     "eslint-plugin-import": "^2.6.0",
-    "husky": "^0.14.2",
+    "husky": "latest",
     "babel-eslint": "^8.1.1",
     "lint-staged": "^4.0.0",
     "prettier": "^1.16.4",
